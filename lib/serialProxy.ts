@@ -6,8 +6,8 @@ let serial: SerialPort | null = null;
 let wss: WebSocketServer | null = null;
 
 export async function startSerialProxy(
-  portPath: string = '/dev/ttyACM0',
-  baudRate: number = 9600
+  portPath: string = 'COM3',
+  baudRate: number = 115200
 ) {
   serial = new SerialPort({ path: portPath, baudRate });
   const parser = serial.pipe(new ReadlineParser({ delimiter: '\n' }));
