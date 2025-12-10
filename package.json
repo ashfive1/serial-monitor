@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start:proxy": "ts-node --transpile-only ./lib/serialProxy.ts",
+    "start:proxy:dev": "ts-node-dev --respawn --transpile-only ./lib/serialProxy.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -26,6 +28,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.0.8",
     "tailwindcss": "^4",
+    "ts-node": "^10.x",
+    "ts-node-dev": "^2.x",
     "typescript": "^5"
   }
 }
